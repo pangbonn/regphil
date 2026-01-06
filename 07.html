@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>News Detail - Department of Religion and Philosophy, MCU</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&amp;family=Sarabun:wght@300;400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#F0A8D0", // The requested pink tone
+                        "primary-darker": "#D086B0", // Slightly darker for hover states/text
+                        "background-light": "#FAFAFA",
+                        "background-dark": "#121212",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#1E1E1E",
+                        "text-light": "#333333",
+                        "text-dark": "#E5E5E5",
+                        "border-light": "#E5E7EB",
+                        "border-dark": "#374151",
+                    },
+                    fontFamily: {
+                        display: ["Kanit", "sans-serif"],
+                        body: ["Sarabun", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'xl': '1rem',
+                        '2xl': '1.5rem',
+                    },
+                    typography: (theme) => ({
+                        DEFAULT: {
+                            css: {
+                                color: theme('colors.text-light'),
+                                a: {
+                                    color: theme('colors.primary-darker'),
+                                    '&:hover': {
+                                        color: theme('colors.primary'),
+                                    },
+                                },
+                            },
+                        },
+                    }),
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Sarabun', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Kanit', sans-serif;
+        }
+
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 4px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #F0A8D0;
+            border-radius: 4px;
+        }
+
+        .prose p {
+            margin-bottom: 1.5em;
+            line-height: 1.8;
+        }
+
+        .prose h2 {
+            font-size: 1.5rem;
+            margin-top: 2em;
+            margin-bottom: 1em;
+            font-weight: 600;
+        }
+
+        .prose ul {
+            list-style-type: disc;
+            padding-left: 1.5em;
+            margin-bottom: 1.5em;
+        }
+
+        .prose li {
+            margin-bottom: 0.5em;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300 flex flex-col min-h-screen">
+    <nav
+        class="sticky top-0 z-50 bg-surface-light/90 dark:bg-surface-dark/90 backdrop-blur-md border-b border-border-light dark:border-border-dark shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-3">
+                    <div
+                        class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                        M
+                    </div>
+                    <div class="flex flex-col">
+                        <span
+                            class="font-display font-bold text-xl text-gray-900 dark:text-white leading-none">MCU</span>
+                        <span class="text-xs text-gray-500 dark:text-gray-400">Dept. of Religion &amp; Philosophy</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center gap-6">
+                    <div class="flex space-x-6">
+                        <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium"
+                            href="#">หน้าหลัก</a>
+                        <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium"
+                            href="#">เกี่ยวกับภาควิชา</a>
+                        <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium"
+                            href="#">หลักสูตร</a>
+                        <a class="text-primary dark:text-primary font-bold transition-colors" href="#">ข่าวสาร</a>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="flex items-center bg-gray-100 dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-full p-1">
+                            <button
+                                class="px-3 py-1 rounded-full bg-white dark:bg-gray-700 shadow-sm text-xs font-bold text-primary transition-all">TH</button>
+                            <button
+                                class="px-3 py-1 rounded-full text-gray-500 dark:text-gray-400 text-xs font-bold hover:text-primary transition-colors">EN</button>
+                        </div>
+                        <a class="px-5 py-2 bg-primary text-gray-900 font-bold rounded-full hover:bg-primary-darker hover:text-white transition-all shadow-md whitespace-nowrap"
+                            href="#">
+                            ติดต่อเรา
+                        </a>
+                    </div>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-600 dark:text-gray-300 hover:text-primary">
+                        <span class="material-icons-round text-3xl">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="bg-background-light dark:bg-background-dark border-b border-border-light dark:border-border-dark">
+        <div class="max-w-7xl mx-auto px-4 py-4 text-sm text-gray-500 dark:text-gray-400">
+            <a class="hover:text-primary transition-colors" href="#">หน้าแรก</a>
+            <span class="mx-2">/</span>
+            <a class="hover:text-primary transition-colors" href="#">ข่าวสารและประกาศ</a>
+            <span class="mx-2">/</span>
+            <span class="text-primary font-medium truncate">เปิดรับสมัครนิสิตใหม่ สาขาวิชาศาสนาเปรียบเทียบ
+                ประจำปีการศึกษา 2567</span>
+        </div>
+    </div>
+    <main class="flex-grow py-8 md:py-12 bg-background-light dark:bg-background-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                <div class="lg:col-span-8">
+                    <article
+                        class="bg-surface-light dark:bg-surface-dark rounded-3xl shadow-sm border border-border-light dark:border-border-dark overflow-hidden">
+                        <div class="relative h-64 md:h-96 w-full overflow-hidden">
+                            <img alt="Students studying comparative religion" class="w-full h-full object-cover"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlkZ5Q9PUwqPCKiWQQOBXgXwczjJnjKDOK56JBInOy1CDcWvcsKm6E9bxFeqhHq8_BMjK0vcr0k-n6ctPCiOeANozPwIC5myu6XAVlm8YfLjU9INW_Oc3aJCBpPGLDnKHCuxp025JTrr1P5EFyjyC6aKUnVQpX8snK-Vv2hMqEYtBa4dtPIxsbBiy5HtXgk-h56J_vdu0pJQadQky68i33lFyJSO36SPGY4Flec8sZcDpXFRxmT8eJ8yTuJVWvVFjJXnLL1HsLjAKL" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                            <div class="absolute bottom-6 left-6 md:left-10">
+                                <span
+                                    class="bg-primary text-gray-900 text-xs md:text-sm font-bold px-4 py-1.5 rounded-full shadow-lg mb-3 inline-block">
+                                    รับสมัครนักศึกษา
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-6 md:p-10">
+                            <div class="mb-8 border-b border-border-light dark:border-border-dark pb-6">
+                                <h1
+                                    class="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white leading-tight mb-4">
+                                    เปิดรับสมัครนิสิตใหม่ สาขาวิชาศาสนาเปรียบเทียบ ประจำปีการศึกษา 2567
+                                </h1>
+                                <div
+                                    class="flex flex-wrap items-center gap-y-2 gap-x-6 text-sm text-gray-500 dark:text-gray-400 font-medium">
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-icons-round text-primary text-lg">event</span>
+                                        <span>12 มกราคม 2567</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-icons-round text-primary text-lg">person</span>
+                                        <span>โดย Admin (สำนักงานเลขานุการ)</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-icons-round text-primary text-lg">visibility</span>
+                                        <span>1.2k ครั้ง</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="prose dark:prose-invert max-w-none text-gray-700 dark:text-gray-300">
+                                <p
+                                    class="lead text-lg md:text-xl font-light text-gray-600 dark:text-gray-300 mb-8 border-l-4 border-primary pl-4 italic">
+                                    ภาควิชาศาสนาและปรัชญา คณะพุทธศาสตร์ ขอเชิญผู้สนใจเข้าศึกษาต่อในระดับปริญญาตรี โท
+                                    และเอก เพื่อสร้างบัณฑิตที่มีความรู้คู่คุณธรรม มีวิสัยทัศน์กว้างไกล
+                                    และสามารถประยุกต์หลักธรรมทางศาสนาเพื่อแก้ไขปัญหาสังคมในยุคปัจจุบันได้อย่างมีประสิทธิภาพ
+                                </p>
+                                <p>
+                                    มหาวิทยาลัยมหาจุฬาลงกรณราชวิทยาลัย โดยภาควิชาศาสนาและปรัชญา คณะพุทธศาสตร์
+                                    เปิดรับสมัครบุคคลทั่วไปเพื่อคัดเลือกเข้าศึกษาต่อในหลักสูตรพุทธศาสตรบัณฑิต
+                                    สาขาวิชาศาสนาเปรียบเทียบ ประจำปีการศึกษา 2567
+                                    โดยมุ่งเน้นการผลิตบัณฑิตที่มีความรู้ความเข้าใจในหลักการของศาสนาต่างๆ อย่างถ่องแท้
+                                    สามารถวิเคราะห์ เปรียบเทียบ และประยุกต์ใช้ในการสร้างสันติสุขให้แก่สังคมโลก
+                                </p>
+                                <h2 class="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
+                                    กำหนดการรับสมัคร</h2>
+                                <ul
+                                    class="space-y-2 list-disc list-inside bg-gray-50 dark:bg-gray-800/50 p-6 rounded-xl border border-gray-100 dark:border-gray-700">
+                                    <li><strong>รอบที่ 1 Portfolio:</strong> 1 - 31 มกราคม 2567</li>
+                                    <li><strong>รอบที่ 2 Quota:</strong> 15 กุมภาพันธ์ - 31 มีนาคม 2567</li>
+                                    <li><strong>รอบที่ 3 Admission:</strong> 1 - 15 พฤษภาคม 2567</li>
+                                    <li><strong>รอบที่ 4 Direct Admission:</strong> 1 - 10 มิถุนายน 2567</li>
+                                </ul>
+                                <h2 class="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
+                                    คุณสมบัติของผู้สมัคร</h2>
+                                <p>
+                                    ผู้สมัครจะต้องเป็นผู้สำเร็จการศึกษาระดับมัธยมศึกษาตอนปลาย หรือเทียบเท่า
+                                    หรือเป็นผู้ที่กำลังศึกษาอยู่ในชั้นปีสุดท้ายของระดับมัธยมศึกษาตอนปลาย
+                                    มีผลการเรียนเฉลี่ยสะสม (GPAX) ไม่ต่ำกว่า 2.00 และมีความสนใจด้านศาสนา ปรัชญา
+                                    และวัฒนธรรม
+                                </p>
+                                <h2 class="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
+                                    เอกสารประกอบการสมัคร</h2>
+                                <ul class="space-y-2 mb-8">
+                                    <li class="flex items-start gap-2">
+                                        <span class="material-icons-round text-primary text-sm mt-1">check_circle</span>
+                                        <span>สำเนาระเบียนแสดงผลการเรียน (ปพ.1)</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="material-icons-round text-primary text-sm mt-1">check_circle</span>
+                                        <span>สำเนาบัตรประจำตัวประชาชน</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="material-icons-round text-primary text-sm mt-1">check_circle</span>
+                                        <span>สำเนาทะเบียนบ้าน</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="material-icons-round text-primary text-sm mt-1">check_circle</span>
+                                        <span>รูปถ่ายขนาด 1.5 นิ้ว จำนวน 2 รูป (ถ่ายไว้ไม่เกิน 6 เดือน)</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="material-icons-round text-primary text-sm mt-1">check_circle</span>
+                                        <span>แฟ้มสะสมผลงาน (Portfolio) *สำหรับรอบที่ 1</span>
+                                    </li>
+                                </ul>
+                                <h2
+                                    class="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mt-12 mb-6 flex items-center gap-3">
+                                    <span class="w-1.5 h-8 bg-primary rounded-full"></span>
+                                    ภาพบรรยากาศการศึกษาและกิจกรรม
+                                </h2>
+                                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                                    <div
+                                        class="col-span-2 md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-2xl shadow-sm cursor-pointer aspect-[4/3] md:aspect-auto">
+                                        <img alt="Students activity main"
+                                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK4GVlOTt0D6XUuviS5M2Sf49uIVS9qeVXLYVwOR7FRP0C52XEDMFz8fqpgvzU67ZARYmRFB1ubboNcy6NxrWvjqnKMPEWYrKxnki4SXfHJkg5DYhwnynb1rl_NQfLV_eW5IHGtW6ksPhlrFT--CaBTrUarv--SpEqDzoaJmlj4MCgNXyrVuvf1AU7Dh-KN415ldDEJXCh3CNMATlCNG6S5vYjho29v2xNQ-jFjG4_pkWr_Ng5fdLbTCE8gtU5wvdHB8J7YmhzmHyf" />
+                                        <div
+                                            class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-300">
+                                        </div>
+                                        <div
+                                            class="absolute bottom-3 right-3 bg-black/50 backdrop-blur-sm text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                                            กิจกรรมจิตอาสา
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-span-1 relative group overflow-hidden rounded-2xl shadow-sm cursor-pointer aspect-square">
+                                        <img alt="Seminar atmosphere"
+                                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj6SsvmZZcszDZbjLVfW4mRwgDRg-yZcAnHj1rwGCdFtabmpj8Q7-CzL1nstT0X2t5YXPbMUIt8RfztsLSJDZr_VH7uVmI_H66_1ok0oRvCbNvt_EPrQnimJtkR3vMqZdGdB0dsP6tkT6-ZbkXfI1FpPpk8hpp33dBoQOO127AC8ntF1bkkW9UuhFH9j3MnBC6OP4M0WM19BcKehUhW3yMGFSHnyJLS4VRFAIGA-3UR9moeAf6sxhE7NJ3U73-hoXrhyXNl6XT1qZ3" />
+                                        <div
+                                            class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                            <span class="material-icons-round text-white drop-shadow-md">zoom_in</span>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-span-1 relative group overflow-hidden rounded-2xl shadow-sm cursor-pointer aspect-square">
+                                        <img alt="Scholarship ceremony"
+                                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK7rqBjHCrh1ixsgShSjF8tPBAXVYecyiSpw-fTKFZxG83vdgV6GTljw2RNBbFtJ5naEa9DEpsQtAqi3nPvPdm-LyNoDQlK5-CcnVTnPruXtyLzZexFOUFPRjGv6222ckqKp-uujmgu-u7_22yLJmxum62wN-ZLjnrG5wDQv1tA9i1R7gKA1DUHyqpVi0XVZ56nQKO2ao5n2DQ45auGmrS5f6QdyHfjZDmzuMt25zhzUZHvR45paUaNW4tdkf6NJAeHSzAlizBRvNz" />
+                                        <div
+                                            class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                            <span class="material-icons-round text-white drop-shadow-md">zoom_in</span>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-span-1 relative group overflow-hidden rounded-2xl shadow-sm cursor-pointer aspect-square">
+                                        <img alt="Classroom environment"
+                                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlkZ5Q9PUwqPCKiWQQOBXgXwczjJnjKDOK56JBInOy1CDcWvcsKm6E9bxFeqhHq8_BMjK0vcr0k-n6ctPCiOeANozPwIC5myu6XAVlm8YfLjU9INW_Oc3aJCBpPGLDnKHCuxp025JTrr1P5EFyjyC6aKUnVQpX8snK-Vv2hMqEYtBa4dtPIxsbBiy5HtXgk-h56J_vdu0pJQadQky68i33lFyJSO36SPGY4Flec8sZcDpXFRxmT8eJ8yTuJVWvVFjJXnLL1HsLjAKL" />
+                                        <div
+                                            class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                            <span class="material-icons-round text-white drop-shadow-md">zoom_in</span>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-span-1 relative group overflow-hidden rounded-2xl shadow-sm cursor-pointer aspect-square bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark flex flex-col items-center justify-center hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                        <span class="text-3xl font-bold text-primary mb-1">+8</span>
+                                        <span class="text-xs text-gray-500 dark:text-gray-400">รูปภาพเพิ่มเติม</span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="mt-8 p-6 bg-primary/10 rounded-2xl border border-primary/20 flex flex-col md:flex-row items-center justify-between gap-4">
+                                    <div>
+                                        <h3 class="font-bold text-lg text-primary-darker">สอบถามรายละเอียดเพิ่มเติม</h3>
+                                        <p class="text-sm">สำนักงานภาควิชาศาสนาและปรัชญา โทร. 035-248-000 ต่อ 8215</p>
+                                    </div>
+                                    <a class="px-6 py-3 bg-primary text-gray-900 font-bold rounded-xl shadow-md hover:bg-primary-darker hover:text-white transition-all flex items-center gap-2"
+                                        href="#">
+                                        <span class="material-icons-round">download</span>
+                                        ดาวน์โหลดระเบียบการ
+                                    </a>
+                                </div>
+                            </div>
+                            <div
+                                class="mt-10 pt-6 border-t border-border-light dark:border-border-dark flex flex-col md:flex-row md:items-center justify-between gap-6">
+                                <div class="flex items-center gap-2">
+                                    <span class="text-sm font-bold text-gray-500 dark:text-gray-400">แท็ก:</span>
+                                    <div class="flex flex-wrap gap-2">
+                                        <a class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 text-xs rounded-full hover:bg-primary hover:text-white transition-colors"
+                                            href="#">รับสมัครนักศึกษา</a>
+                                        <a class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 text-xs rounded-full hover:bg-primary hover:text-white transition-colors"
+                                            href="#">ปริญญาตรี</a>
+                                        <a class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 text-xs rounded-full hover:bg-primary hover:text-white transition-colors"
+                                            href="#">ปีการศึกษา 2567</a>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="text-sm font-bold text-gray-500 dark:text-gray-400">แชร์:</span>
+                                    <button
+                                        class="w-9 h-9 rounded-full bg-[#1877F2] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-sm">
+                                        <i class="material-symbols-outlined text-lg">facebook</i>
+                                    </button>
+                                    <button
+                                        class="w-9 h-9 rounded-full bg-[#1DA1F2] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-sm">
+                                        <span class="font-bold text-lg">X</span>
+                                    </button>
+                                    <button
+                                        class="w-9 h-9 rounded-full bg-[#06C755] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-sm">
+                                        <i class="material-symbols-outlined text-lg">chat</i>
+                                    </button>
+                                    <button
+                                        class="w-9 h-9 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300 flex items-center justify-center hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors shadow-sm"
+                                        title="Copy Link">
+                                        <span class="material-icons-round text-lg">content_copy</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                        <a class="group p-6 bg-surface-light dark:bg-surface-dark rounded-2xl border border-border-light dark:border-border-dark shadow-sm hover:border-primary/50 transition-all flex items-start gap-4"
+                            href="#">
+                            <span
+                                class="material-icons-round text-3xl text-gray-300 group-hover:text-primary transition-colors">arrow_back</span>
+                            <div class="flex flex-col">
+                                <span class="text-xs text-gray-400 mb-1">บทความก่อนหน้า</span>
+                                <span
+                                    class="text-sm font-bold text-gray-800 dark:text-white group-hover:text-primary transition-colors line-clamp-2">ประกาศตารางสอบปลายภาค
+                                    ประจำภาคเรียนที่ 2/2566</span>
+                            </div>
+                        </a>
+                        <a class="group p-6 bg-surface-light dark:bg-surface-dark rounded-2xl border border-border-light dark:border-border-dark shadow-sm hover:border-primary/50 transition-all flex items-start justify-end gap-4 text-right"
+                            href="#">
+                            <div class="flex flex-col">
+                                <span class="text-xs text-gray-400 mb-1">บทความถัดไป</span>
+                                <span
+                                    class="text-sm font-bold text-gray-800 dark:text-white group-hover:text-primary transition-colors line-clamp-2">ขอเชิญร่วมงานเสวนาวิชาการ
+                                    "ศาสนากับโลกยุคดิจิทัล"</span>
+                            </div>
+                            <span
+                                class="material-icons-round text-3xl text-gray-300 group-hover:text-primary transition-colors">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:col-span-4 space-y-8">
+                    <div
+                        class="bg-surface-light dark:bg-surface-dark rounded-3xl p-6 shadow-sm border border-border-light dark:border-border-dark">
+                        <div class="flex items-center justify-between mb-6">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white border-l-4 border-primary pl-3">
+                                ข่าวล่าสุด</h3>
+                            <a class="text-primary text-sm hover:underline" href="#">ดูทั้งหมด</a>
+                        </div>
+                        <div class="space-y-6">
+                            <a class="flex gap-4 group" href="#">
+                                <div class="w-20 h-20 flex-shrink-0 rounded-xl overflow-hidden bg-gray-100 relative">
+                                    <img alt="News Thumb"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj6SsvmZZcszDZbjLVfW4mRwgDRg-yZcAnHj1rwGCdFtabmpj8Q7-CzL1nstT0X2t5YXPbMUIt8RfztsLSJDZr_VH7uVmI_H66_1ok0oRvCbNvt_EPrQnimJtkR3vMqZdGdB0dsP6tkT6-ZbkXfI1FpPpk8hpp33dBoQOO127AC8ntF1bkkW9UuhFH9j3MnBC6OP4M0WM19BcKehUhW3yMGFSHnyJLS4VRFAIGA-3UR9moeAf6sxhE7NJ3U73-hoXrhyXNl6XT1qZ3" />
+                                </div>
+                                <div class="flex flex-col justify-center">
+                                    <span class="text-xs text-primary font-medium mb-1">10 ม.ค. 67</span>
+                                    <h4
+                                        class="text-sm font-bold text-gray-800 dark:text-white leading-snug line-clamp-2 group-hover:text-primary transition-colors">
+                                        ขอเชิญร่วมงานเสวนาวิชาการ "ศาสนากับโลกยุคดิจิทัล"
+                                    </h4>
+                                </div>
+                            </a>
+                            <a class="flex gap-4 group" href="#">
+                                <div class="w-20 h-20 flex-shrink-0 rounded-xl overflow-hidden bg-gray-100 relative">
+                                    <img alt="News Thumb"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK7rqBjHCrh1ixsgShSjF8tPBAXVYecyiSpw-fTKFZxG83vdgV6GTljw2RNBbFtJ5naEa9DEpsQtAqi3nPvPdm-LyNoDQlK5-CcnVTnPruXtyLzZexFOUFPRjGv6222ckqKp-uujmgu-u7_22yLJmxum62wN-ZLjnrG5wDQv1tA9i1R7gKA1DUHyqpVi0XVZ56nQKO2ao5n2DQ45auGmrS5f6QdyHfjZDmzuMt25zhzUZHvR45paUaNW4tdkf6NJAeHSzAlizBRvNz" />
+                                </div>
+                                <div class="flex flex-col justify-center">
+                                    <span class="text-xs text-primary font-medium mb-1">5 ม.ค. 67</span>
+                                    <h4
+                                        class="text-sm font-bold text-gray-800 dark:text-white leading-snug line-clamp-2 group-hover:text-primary transition-colors">
+                                        ประกาศทุนสนับสนุนการวิจัยทางพระพุทธศาสนาและปรัชญา
+                                    </h4>
+                                </div>
+                            </a>
+                            <a class="flex gap-4 group" href="#">
+                                <div class="w-20 h-20 flex-shrink-0 rounded-xl overflow-hidden bg-gray-100 relative">
+                                    <img alt="News Thumb"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK4GVlOTt0D6XUuviS5M2Sf49uIVS9qeVXLYVwOR7FRP0C52XEDMFz8fqpgvzU67ZARYmRFB1ubboNcy6NxrWvjqnKMPEWYrKxnki4SXfHJkg5DYhwnynb1rl_NQfLV_eW5IHGtW6ksPhlrFT--CaBTrUarv--SpEqDzoaJmlj4MCgNXyrVuvf1AU7Dh-KN415ldDEJXCh3CNMATlCNG6S5vYjho29v2xNQ-jFjG4_pkWr_Ng5fdLbTCE8gtU5wvdHB8J7YmhzmHyf" />
+                                </div>
+                                <div class="flex flex-col justify-center">
+                                    <span class="text-xs text-primary font-medium mb-1">28 ธ.ค. 66</span>
+                                    <h4
+                                        class="text-sm font-bold text-gray-800 dark:text-white leading-snug line-clamp-2 group-hover:text-primary transition-colors">
+                                        ภาพบรรยากาศโครงการ "จิตอาสาพัฒนาวัด"
+                                    </h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-surface-light dark:bg-surface-dark rounded-3xl p-6 shadow-sm border border-border-light dark:border-border-dark">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white border-l-4 border-primary pl-3 mb-6">
+                            หมวดหมู่ข่าวสาร</h3>
+                        <ul class="space-y-3">
+                            <li>
+                                <a class="flex items-center justify-between p-3 rounded-xl bg-gray-50 dark:bg-gray-800/50 hover:bg-primary/10 hover:text-primary transition-colors group"
+                                    href="#">
+                                    <span
+                                        class="font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary">ข่าวประชาสัมพันธ์</span>
+                                    <span
+                                        class="bg-white dark:bg-gray-700 text-xs px-2 py-1 rounded-md text-gray-500 shadow-sm">12</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="flex items-center justify-between p-3 rounded-xl bg-gray-50 dark:bg-gray-800/50 hover:bg-primary/10 hover:text-primary transition-colors group"
+                                    href="#">
+                                    <span
+                                        class="font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary">กิจกรรมวิชาการ</span>
+                                    <span
+                                        class="bg-white dark:bg-gray-700 text-xs px-2 py-1 rounded-md text-gray-500 shadow-sm">8</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="flex items-center justify-between p-3 rounded-xl bg-gray-50 dark:bg-gray-800/50 hover:bg-primary/10 hover:text-primary transition-colors group"
+                                    href="#">
+                                    <span
+                                        class="font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary">รับสมัครนักศึกษา</span>
+                                    <span
+                                        class="bg-white dark:bg-gray-700 text-xs px-2 py-1 rounded-md text-gray-500 shadow-sm">5</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="flex items-center justify-between p-3 rounded-xl bg-gray-50 dark:bg-gray-800/50 hover:bg-primary/10 hover:text-primary transition-colors group"
+                                    href="#">
+                                    <span
+                                        class="font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary">ทุนการศึกษา</span>
+                                    <span
+                                        class="bg-white dark:bg-gray-700 text-xs px-2 py-1 rounded-md text-gray-500 shadow-sm">3</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div
+                        class="bg-gradient-to-br from-primary/20 to-purple-100 dark:from-primary/10 dark:to-purple-900/20 rounded-3xl p-8 text-center border border-primary/20 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 -mr-8 -mt-8 w-24 h-24 bg-primary/20 rounded-full blur-xl">
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 -ml-8 -mb-8 w-24 h-24 bg-purple-400/20 rounded-full blur-xl">
+                        </div>
+                        <span class="material-icons-round text-5xl text-primary mb-4 block">mail_outline</span>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">ไม่พลาดข่าวสารสำคัญ</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 mb-6">
+                            ลงทะเบียนเพื่อรับข่าวสารและประกาศล่าสุดจากทางภาควิชาส่งตรงถึงอีเมลของคุณ</p>
+                        <form class="space-y-3 relative z-10">
+                            <input
+                                class="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-600 bg-white dark:bg-surface-dark focus:ring-2 focus:ring-primary focus:border-primary text-sm"
+                                placeholder="อีเมลของคุณ" type="email" />
+                            <button
+                                class="w-full py-3 bg-primary text-gray-900 font-bold rounded-xl shadow-md hover:bg-primary-darker hover:text-white transition-all text-sm">
+                                สมัครรับข่าวสาร
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-surface-dark text-white pt-16 pb-8 border-t-4 border-primary mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h3 class="font-bold text-lg mb-4 text-primary">การศึกษา</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a class="hover:text-white transition-colors" href="#">หลักสูตรศาสนาเปรียบเทียบ</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">หลักสูตรนานาชาติ</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">การปฏิบัติธรรม</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">การสมัครเข้าศึกษา</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4 text-primary">วิจัยและนวัตกรรม</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a class="hover:text-white transition-colors" href="#">บทความวิชาการ</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">วารสารพุทธศาสตร์</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">คลังความรู้ศาสนา</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">ศูนย์อาเซียนศึกษา</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4 text-primary">บริการสังคม</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a class="hover:text-white transition-colors" href="#">บริการวิชาการแก่ชุมชน</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">โครงการธรรมะสัญจร</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">ค่ายคุณธรรม</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4 text-primary">เกี่ยวกับเรา</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a class="hover:text-white transition-colors" href="#">ประวัติความเป็นมา</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">ปฏิทินกิจกรรม</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">ทำเนียบบุคลากร</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="flex items-center gap-3">
+                    <div
+                        class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white font-bold text-sm">
+                        M</div>
+                    <span class="text-sm text-gray-400">มหาวิทยาลัยมหาจุฬาลงกรณราชวิทยาลัย © 2024</span>
+                </div>
+                <div class="flex space-x-4">
+                    <a class="text-gray-400 hover:text-white" href="#"><i class="material-icons-round">facebook</i></a>
+                    <a class="text-gray-400 hover:text-white" href="#"><i
+                            class="material-icons-round">smart_display</i></a>
+                    <a class="text-gray-400 hover:text-white" href="#"><i class="material-icons-round">podcasts</i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

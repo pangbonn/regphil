@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html class="light" lang="th">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>บุคลากร - ภาควิชาศาสนาและปรัชญา</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;family=Noto+Sans+Thai:wght@100..900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f0a8d0",
+                        "primary-dark": "#d68fb5",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#20121a",
+                        "text-main": "#171215",
+                        "text-secondary": "#866577",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "Noto Sans Thai", "sans-serif"],
+                        "sans": ["Lexend", "Noto Sans Thai", "sans-serif"],
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .org-line-vertical {
+            @apply w-0.5 bg-gray-300 dark:bg-gray-700;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-text-main dark:text-white font-display overflow-x-hidden transition-colors duration-200">
+    <div class="flex min-h-screen flex-col">
+        <header
+            class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f4f0f2] bg-white/95 dark:bg-[#1a0f15]/95 backdrop-blur px-6 py-3 lg:px-10 dark:border-gray-800">
+            <div class="flex items-center gap-4 text-text-main dark:text-white">
+                <div class="size-9 flex items-center justify-center rounded-lg bg-primary/20 text-primary">
+                    <span class="material-symbols-outlined">temple_buddhist</span>
+                </div>
+                <div class="flex flex-col">
+                    <h2
+                        class="text-text-main dark:text-white text-base font-bold leading-none tracking-tight hidden sm:block">
+                        ภาควิชาศาสนาและปรัชญา</h2>
+                    <span
+                        class="text-[10px] text-text-secondary dark:text-gray-400 font-normal mt-1 hidden sm:block">คณะพุทธศาสตร์
+                        มจร.</span>
+                    <h2
+                        class="text-text-main dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] sm:hidden">
+                        DRP</h2>
+                </div>
+            </div>
+            <div class="flex flex-1 justify-end gap-8">
+                <div class="hidden lg:flex items-center gap-9">
+                    <a class="text-text-main dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors"
+                        href="#">หน้าแรก</a>
+                    <a class="text-text-main dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors"
+                        href="#">หลักสูตร</a>
+                    <a class="text-text-main dark:text-gray-300 text-sm font-medium leading-normal text-primary"
+                        href="#">บุคลากร</a>
+                    <a class="text-text-main dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors"
+                        href="#">ติดต่อเรา</a>
+                </div>
+                <div class="flex gap-4">
+                    <button class="lg:hidden p-2 text-text-main dark:text-white">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                    <button
+                        class="hidden lg:flex cursor-pointer items-center justify-center overflow-hidden rounded-full h-9 px-6 bg-primary hover:bg-primary-dark transition-colors text-[#171215] text-sm font-bold shadow-sm hover:shadow-md">
+                        <span class="truncate">เข้าสู่ระบบ</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main class="flex-1 w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <div class="flex flex-col gap-2 mb-10 text-center sm:text-left">
+                <p
+                    class="text-text-main dark:text-white text-3xl sm:text-4xl font-black leading-tight tracking-[-0.033em]">
+                    บุคลากรภาควิชา</p>
+                <p class="text-text-secondary dark:text-gray-400 text-base font-normal leading-normal">
+                    โครงสร้างการบริหารและคณาจารย์ประจำหลักสูตร</p>
+            </div>
+            <div
+                class="bg-white dark:bg-[#2a1d25] rounded-2xl shadow-sm p-4 sm:p-6 mb-12 border border-gray-100 dark:border-gray-800">
+                <div class="flex flex-col lg:flex-row gap-6 justify-between items-start lg:items-center">
+                    <label class="flex flex-col w-full lg:max-w-[400px] h-11">
+                        <div
+                            class="flex w-full flex-1 items-stretch rounded-xl h-full border border-gray-200 dark:border-gray-700 bg-[#f4f0f2] dark:bg-gray-800 overflow-hidden focus-within:ring-2 focus-within:ring-primary/50 transition-shadow">
+                            <div
+                                class="text-text-secondary dark:text-gray-400 flex items-center justify-center pl-4 pr-2">
+                                <span class="material-symbols-outlined text-[20px]">search</span>
+                            </div>
+                            <input
+                                class="flex w-full min-w-0 flex-1 bg-transparent border-none text-text-main dark:text-white placeholder:text-text-secondary dark:placeholder:text-gray-500 focus:ring-0 px-2 h-full text-sm font-normal"
+                                placeholder="ค้นหาบุคลากร (ชื่อ, นามสกุล)" />
+                        </div>
+                    </label>
+                    <div class="flex flex-wrap gap-2">
+                        <button
+                            class="flex h-9 items-center justify-center gap-x-2 rounded-full bg-primary text-text-main px-4 transition-colors shadow-sm">
+                            <span class="material-symbols-outlined text-[18px]">groups</span>
+                            <span class="text-sm font-bold">ทั้งหมด</span>
+                        </button>
+                        <button
+                            class="flex h-9 items-center justify-center gap-x-2 rounded-full bg-white border border-gray-200 dark:border-gray-700 dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-text-main dark:text-gray-300 px-4 transition-colors">
+                            <span class="material-symbols-outlined text-[18px]">account_tree</span>
+                            <span class="text-sm font-medium">ผู้บริหาร</span>
+                        </button>
+                        <button
+                            class="flex h-9 items-center justify-center gap-x-2 rounded-full bg-white border border-gray-200 dark:border-gray-700 dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-text-main dark:text-gray-300 px-4 transition-colors">
+                            <span class="material-symbols-outlined text-[18px]">school</span>
+                            <span class="text-sm font-medium">อาจารย์ประจำหลักสูตร</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <section class="mb-20">
+                <div class="flex items-center justify-center gap-3 mb-10">
+                    <h2 class="text-text-main dark:text-white text-2xl sm:text-3xl font-bold leading-tight text-center">
+                        แผนผังผู้บริหารภาควิชา</h2>
+                </div>
+                <div class="flex flex-col items-center w-full overflow-x-auto pb-4">
+                    <div class="flex flex-col items-center relative z-10">
+                        <div
+                            class="group relative w-[280px] sm:w-[320px] bg-white dark:bg-[#2a1d25] rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] dark:shadow-none border border-gray-100 dark:border-gray-700 overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-primary/40">
+                            <div class="aspect-[4/5] w-full overflow-hidden bg-gray-100 dark:bg-gray-800 relative">
+                                <img alt="Portrait of Head of Department"
+                                    class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2z8DwhaUrav5uM3B5hkhdWkRhLqSRoMwEydsGecbplaeVYoIfQL3YHrsCS8z0R-bO7NuAE_zVyVd5EZ4P2sYtdnoLuR0mryPd_e378_5pGhc3R2OyUOlw6iCwp0t3zmz_LYMyObP7xGm6q6e3aJAi06BKnpLwiKS4OJUAOqmduMe9Rt1LH93nXrT4QT-zdzup60x9UKzhqUglQmQ2mmEhNgvhRCtD4xNrAK-VQeu-ZMbP0f0en16inWvJdnwJ2kxwe6K9FUaMRDnP" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-[#171215]/90 via-[#171215]/20 to-transparent">
+                                </div>
+                                <div
+                                    class="absolute bottom-0 left-0 right-0 p-5 flex flex-col items-center text-center">
+                                    <span
+                                        class="inline-block px-3 py-1 rounded-full text-[11px] font-bold bg-primary text-[#171215] mb-2 shadow-lg tracking-wide uppercase">หัวหน้าภาควิชา</span>
+                                    <h3 class="text-xl font-bold text-white mb-1">พระมหาสมชาย ฐานวุฑฺโฒ, ผศ.ดร.</h3>
+                                    <p class="text-white/80 text-xs font-light">หัวหน้าภาควิชาศาสนาและปรัชญา</p>
+                                </div>
+                            </div>
+                            <div
+                                class="h-10 bg-white dark:bg-[#2a1d25] flex items-center justify-center border-t border-gray-100 dark:border-gray-800">
+                                <button
+                                    class="text-xs font-bold text-primary flex items-center gap-1 group-hover:gap-2 transition-all">
+                                    ดูประวัติ <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="h-12 w-0.5 bg-gray-300 dark:bg-gray-600"></div>
+                    </div>
+                    <div class="flex flex-col items-center relative z-10">
+                        <div
+                            class="w-3 h-3 rounded-full bg-gray-300 dark:bg-gray-600 border-2 border-white dark:border-[#20121a] -mt-1.5 z-20">
+                        </div>
+                        <div
+                            class="mt-4 group relative w-[240px] bg-white dark:bg-[#2a1d25] rounded-xl shadow-lg border border-gray-100 dark:border-gray-800 overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                            <div class="aspect-square w-full overflow-hidden bg-gray-100 dark:bg-gray-800 relative">
+                                <img alt="Portrait of Secretary"
+                                    class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0GDG83U462Y7udAcPTe9d6uSHhIdSf30HHc-aXEzgMDMDcqsjEThqggeJzpqpZe11eA-N3Gi-LeEylcxcD_ecbfqSs7uuFdKYiWB2welbcI9omA_lRJZyr2kEFp_1Zr_zh2Dc1NDx6DAQg361zXdn2ai1NI5UUPDFdEmWMqNGxr-je4gyoTBXXd4JZB60WW3vQz5pLDAlZSNKX3oIq9i2-mqXQwkvxsTUAf3nD5DA4z-tNhu9ZRl26hjISevzXHXcLtK6CFKXIbO-" />
+                            </div>
+                            <div class="p-4 text-center bg-white dark:bg-[#2a1d25]">
+                                <span
+                                    class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 mb-1">เลขานุการ</span>
+                                <h3
+                                    class="text-base font-bold text-text-main dark:text-white group-hover:text-primary transition-colors">
+                                    ผศ.ดร. สุมาลี รักดี</h3>
+                                <p class="text-xs text-text-secondary dark:text-gray-400 mt-1">เลขานุการภาควิชา</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="mb-16">
+                <div
+                    class="rounded-3xl bg-gradient-to-br from-primary/10 to-transparent dark:from-white/5 dark:to-transparent p-6 sm:p-10 border border-primary/10 dark:border-white/5">
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 gap-4">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="flex items-center justify-center size-12 rounded-full bg-white dark:bg-gray-800 text-primary shadow-sm ring-4 ring-primary/10">
+                                <span class="material-symbols-outlined">school</span>
+                            </div>
+                            <div>
+                                <h2 class="text-text-main dark:text-white text-2xl font-bold leading-tight">
+                                    อาจารย์ผู้รับผิดชอบหลักสูตร</h2>
+                                <p class="text-text-secondary dark:text-gray-400 text-sm mt-1">
+                                    คณาจารย์ผู้ทรงคุณวุฒิประจำสาขาวิชา</p>
+                            </div>
+                        </div>
+                        <a class="flex items-center gap-1 text-sm font-bold text-primary hover:text-primary-dark transition-colors px-4 py-2 rounded-full hover:bg-primary/10"
+                            href="#">
+                            ดูทั้งหมด <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div
+                            class="group flex flex-col rounded-2xl border border-white dark:border-gray-700 bg-white dark:bg-[#2a1d25] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+                            <div class="aspect-[3/4] w-full overflow-hidden bg-gray-100 dark:bg-gray-800 relative">
+                                <img alt="Portrait of Faculty Member"
+                                    class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBS_PFU0A4g8U17LqPB5DfjWJZhfGwXtF1Gt_Ux2C3ce8cXMJRsndeRMoWTMGHnsOC7xIwHsE1m28jHvFFTAA1SjeFdodbdt5LJyozDUM1yAEfiNW7_bbdvl-dWN9oDdyMHp31QAk2k1cOLnNTVaUi6zlvm1VjvIrysA5_9MFgXXIqE1DtGW7ga2jOejJUFYeDhGFHGCwG6RFKD9vB5evAasWorgnWVjhUttlFSBkQU0ZHpE0TxEqNHAYzLKnChte32S8WP6WTEklm5" />
+                            </div>
+                            <div class="p-5 flex flex-col gap-1 flex-1">
+                                <h3
+                                    class="text-lg font-bold text-text-main dark:text-white group-hover:text-primary-dark dark:group-hover:text-primary transition-colors">
+                                    รศ.ดร. วีระศักดิ์ ปัญญา</h3>
+                                <p class="text-sm text-text-secondary dark:text-gray-400 font-medium">ประธานหลักสูตรฯ
+                                </p>
+                                <div class="my-3 h-px w-full bg-gray-100 dark:bg-gray-800"></div>
+                                <p class="text-xs text-text-secondary/80 dark:text-gray-500 line-clamp-2">
+                                    สาขาวิชาปรัชญาดุษฎีบัณฑิต<br />(ปรัชญาและศาสนา)</p>
+                            </div>
+                        </div>
+                        <div
+                            class="group flex flex-col rounded-2xl border border-white dark:border-gray-700 bg-white dark:bg-[#2a1d25] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+                            <div class="aspect-[3/4] w-full overflow-hidden bg-gray-100 dark:bg-gray-800 relative">
+                                <img alt="Portrait of Faculty Member"
+                                    class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFNuDmgfBSH3Y1IKxh79I_EoGrTNToksC6270NylG10R4Uh5mJaVAxtSUwyl48gwFVIsKT61WvoFmYAABImTTIhD6rXKm9pqH6uqICYbc3a_JIgHZqWx1nAURiJQ-mtWNSiN7eJqwBvI_XvCllf-njnEumK0UnyNoRhzRsgPP3Qq2keWkd9nMm46Z7ve390xKDrHBd4u_FQa8x-Lko7glZUiiiXhx4sFbY9BBZADNviQ1qt1uvza2m_YB7uo6oGeILvfIDg7BWcvry" />
+                            </div>
+                            <div class="p-5 flex flex-col gap-1 flex-1">
+                                <h3
+                                    class="text-lg font-bold text-text-main dark:text-white group-hover:text-primary-dark dark:group-hover:text-primary transition-colors">
+                                    ผศ.ดร. นิตยา ธรรมดี</h3>
+                                <p class="text-sm text-text-secondary dark:text-gray-400 font-medium">
+                                    อาจารย์ประจำหลักสูตร</p>
+                                <div class="my-3 h-px w-full bg-gray-100 dark:bg-gray-800"></div>
+                                <p class="text-xs text-text-secondary/80 dark:text-gray-500 line-clamp-2">
+                                    สาขาวิชาพุทธศาสนาและปรัชญา</p>
+                            </div>
+                        </div>
+                        <div
+                            class="group flex flex-col rounded-2xl border border-white dark:border-gray-700 bg-white dark:bg-[#2a1d25] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+                            <div class="aspect-[3/4] w-full overflow-hidden bg-gray-100 dark:bg-gray-800 relative">
+                                <img alt="Portrait of Faculty Member"
+                                    class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaeB65_UqjVFXMOKMFMCAP2Fslr4AMGkcjVmPAoNM3gIBdmvycG780RV8MmCk_VpNNivtYotY7jFxpz-z4sDXadaLMuViv-_I7fbjBYTYt5ckuscqS5lUfr-CAvj05c9WRcokczZpikFrFgCRpjKNp8AfcTJm76jIDx4hX0Wxm5uzayDaN1RnNIBp84NKdAqN8ll9RS_aATecuzI7iQPbnspr2koMbjSA4LgqrFF6drYKfhH5PlY7ZU8W_Ycjt07U6JJTC88nmfsRk" />
+                            </div>
+                            <div class="p-5 flex flex-col gap-1 flex-1">
+                                <h3
+                                    class="text-lg font-bold text-text-main dark:text-white group-hover:text-primary-dark dark:group-hover:text-primary transition-colors">
+                                    ดร. พรทิพย์ สุขใจ</h3>
+                                <p class="text-sm text-text-secondary dark:text-gray-400 font-medium">
+                                    อาจารย์ประจำหลักสูตร</p>
+                                <div class="my-3 h-px w-full bg-gray-100 dark:bg-gray-800"></div>
+                                <p class="text-xs text-text-secondary/80 dark:text-gray-500 line-clamp-2">
+                                    สาขาวิชาศาสนาเปรียบเทียบ</p>
+                            </div>
+                        </div>
+                        <div
+                            class="group flex flex-col rounded-2xl border border-white dark:border-gray-700 bg-white dark:bg-[#2a1d25] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+                            <div class="aspect-[3/4] w-full overflow-hidden bg-gray-100 dark:bg-gray-800 relative">
+                                <div
+                                    class="flex h-full w-full items-center justify-center bg-gray-50 dark:bg-gray-800 text-gray-300 dark:text-gray-600">
+                                    <span class="material-symbols-outlined text-6xl">account_circle</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex flex-col gap-1 flex-1">
+                                <h3
+                                    class="text-lg font-bold text-text-main dark:text-white group-hover:text-primary-dark dark:group-hover:text-primary transition-colors">
+                                    อาจารย์ สมศักดิ์ ใจมั่น</h3>
+                                <p class="text-sm text-text-secondary dark:text-gray-400 font-medium">
+                                    อาจารย์ประจำหลักสูตร</p>
+                                <div class="my-3 h-px w-full bg-gray-100 dark:bg-gray-800"></div>
+                                <p class="text-xs text-text-secondary/80 dark:text-gray-500 line-clamp-2">
+                                    สาขาวิชาพุทธศาสนา</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="mb-12">
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="h-8 w-1.5 bg-gray-200 dark:bg-gray-700 rounded-full"></div>
+                    <h2 class="text-text-main dark:text-white text-2xl font-bold leading-tight">เจ้าหน้าที่สนับสนุน</h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div
+                        class="group flex flex-row sm:flex-col items-center sm:items-start rounded-xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-[#2a1d25] overflow-hidden hover:border-primary/30 hover:shadow-md transition-all">
+                        <div class="w-24 sm:w-full sm:h-56 shrink-0 overflow-hidden bg-gray-100 dark:bg-gray-800">
+                            <img alt="Portrait of Staff Member" class="h-full w-full object-cover"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnUvBO4FjKpO-V49DYmcH4y3eswS03x5xkzJP2ScardbYds66UCjXqWSxQ8L78y8oemj9iRXHVGBmvYIQnTrBvEIYcqNrG6aOClJvyHBuc0D1vAwQLZDiM7HYzIhloF1xSgouf5TNuhxgxwVMAv-k2CpXU4J_HjIDV6x6qy07DBDTSTfrbkL2f1Pb57P6-EhvIwz71D2pt_zcjDV5GSLNircpFq_rE6XzXmp-_S7OtItHc5ET_TAY2kQIi9nLoyjV8T7E66rAPD3ZN" />
+                        </div>
+                        <div class="p-4 flex flex-col justify-center gap-1 w-full">
+                            <h3 class="text-base sm:text-lg font-bold text-text-main dark:text-white">นายธนพล เจริญยิ่ง
+                            </h3>
+                            <p class="text-xs sm:text-sm text-text-secondary dark:text-gray-400">
+                                เจ้าหน้าที่บริหารงานทั่วไป</p>
+                            <a class="mt-2 text-xs font-bold text-primary hover:underline flex items-center gap-1"
+                                href="#">
+                                <span class="material-symbols-outlined text-[14px]">mail</span> ติดต่อ
+                            </a>
+                        </div>
+                    </div>
+                    <div
+                        class="group flex flex-row sm:flex-col items-center sm:items-start rounded-xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-[#2a1d25] overflow-hidden hover:border-primary/30 hover:shadow-md transition-all">
+                        <div class="w-24 sm:w-full sm:h-56 shrink-0 overflow-hidden bg-gray-100 dark:bg-gray-800">
+                            <img alt="Portrait of Staff Member" class="h-full w-full object-cover"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBksh5UeByT6-cSMbCcH5VObUkRphK7lIoeUa4O72vvDlVBZb8CzHTTDfWOj1zcLTaJr2X3Dn7frBbtKX60piM_h1XyRHvtJGKd-8agc6SWy7se5I2HXFzf7R2n4HCHdqChpQN2QO6X_Y2EPc5_Kf9Otyh9H0R6RzWLaXoFuzNUiTOPLd7SFIXC3xtJ6NQaMWFC12hGnqwhgYqJFNyaCGqcgRMhK41LVvhHGJYv9RNwh6ZSv8iOFNrr2ZBB_JD0GnQuWQRyRr7nWlk6" />
+                        </div>
+                        <div class="p-4 flex flex-col justify-center gap-1 w-full">
+                            <h3 class="text-base sm:text-lg font-bold text-text-main dark:text-white">นางสาวพิมพ์ใจ
+                                รักการเรียน</h3>
+                            <p class="text-xs sm:text-sm text-text-secondary dark:text-gray-400">นักวิชาการศึกษา</p>
+                            <a class="mt-2 text-xs font-bold text-primary hover:underline flex items-center gap-1"
+                                href="#">
+                                <span class="material-symbols-outlined text-[14px]">mail</span> ติดต่อ
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="bg-white dark:bg-[#1a0f15] border-t border-gray-100 dark:border-gray-800 pt-16 pb-8">
+            <div class="w-full max-w-[1280px] mx-auto px-6 lg:px-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center gap-2 text-text-main dark:text-white">
+                            <div class="size-8 bg-primary/20 rounded-lg flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined text-[20px]">temple_buddhist</span>
+                            </div>
+                            <div class="flex flex-col">
+                                <h3 class="font-bold text-base leading-tight">ภาควิชาศาสนาและปรัชญา</h3>
+                                <span
+                                    class="text-[10px] text-text-secondary dark:text-gray-400">มหาวิทยาลัยมหาจุฬาลงกรณราชวิทยาลัย</span>
+                            </div>
+                        </div>
+                        <p class="text-text-secondary dark:text-gray-400 text-sm leading-relaxed mt-2">
+                            มุ่งมั่นสร้างสรรค์บัณฑิตให้มีความรู้คู่คุณธรรม นำสังคมด้วยปัญญา ตามแนวทางพระพุทธศาสนา
+                            บูรณาการศาสตร์สมัยใหม่
+                        </p>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h4 class="font-bold text-text-main dark:text-white">เมนูลัด</h4>
+                        <div class="flex flex-col gap-2">
+                            <a class="text-sm text-text-secondary dark:text-gray-400 hover:text-primary transition-colors"
+                                href="#">เกี่ยวกับเรา</a>
+                            <a class="text-sm text-text-secondary dark:text-gray-400 hover:text-primary transition-colors"
+                                href="#">หลักสูตรการศึกษา</a>
+                            <a class="text-sm text-text-secondary dark:text-gray-400 hover:text-primary transition-colors"
+                                href="#">ข่าวประชาสัมพันธ์</a>
+                            <a class="text-sm text-text-secondary dark:text-gray-400 hover:text-primary transition-colors"
+                                href="#">ติดต่อสอบถาม</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h4 class="font-bold text-text-main dark:text-white">สำหรับบุคลากร</h4>
+                        <div class="flex flex-col gap-2">
+                            <a class="text-sm text-text-secondary dark:text-gray-400 hover:text-primary transition-colors"
+                                href="#">ระบบสารสนเทศ (MIS)</a>
+                            <a class="text-sm text-text-secondary dark:text-gray-400 hover:text-primary transition-colors"
+                                href="#">ปฏิทินกิจกรรม</a>
+                            <a class="text-sm text-text-secondary dark:text-gray-400 hover:text-primary transition-colors"
+                                href="#">ดาวน์โหลดแบบฟอร์ม</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h4 class="font-bold text-text-main dark:text-white">ติดต่อเรา</h4>
+                        <p class="text-sm text-text-secondary dark:text-gray-400 leading-relaxed">
+                            79 หมู่ 1 ต.ลำไทร อ.วังน้อย<br />
+                            จ.พระนครศรีอยุธยา 13170
+                        </p>
+                        <div class="flex gap-4 mt-2">
+                            <a class="size-8 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-text-secondary dark:text-gray-400 hover:bg-primary hover:text-white transition-all"
+                                href="#"><span class="material-symbols-outlined text-[18px]">public</span></a>
+                            <a class="size-8 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-text-secondary dark:text-gray-400 hover:bg-primary hover:text-white transition-all"
+                                href="#"><span class="material-symbols-outlined text-[18px]">mail</span></a>
+                            <a class="size-8 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-text-secondary dark:text-gray-400 hover:bg-primary hover:text-white transition-all"
+                                href="#"><span class="material-symbols-outlined text-[18px]">call</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="border-t border-gray-100 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-xs text-text-secondary dark:text-gray-500">© 2567 ภาควิชาศาสนาและปรัชญา
+                        คณะพุทธศาสตร์. สงวนลิขสิทธิ์.</p>
+                    <div class="flex gap-6">
+                        <a class="text-xs text-text-secondary dark:text-gray-500 hover:text-text-main"
+                            href="#">นโยบายความเป็นส่วนตัว</a>
+                        <a class="text-xs text-text-secondary dark:text-gray-500 hover:text-text-main"
+                            href="#">เงื่อนไขการให้บริการ</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>

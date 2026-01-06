@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ปฏิทินการศึกษา - ภาควิชาศาสนาและปรัชญา คณะพุทธศาสตร์ มจร.</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&amp;family=Sarabun:wght@300;400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#F0A8D0", // The requested pink tone
+                        "primary-darker": "#D086B0", // Slightly darker for hover states/text
+                        "background-light": "#FAFAFA",
+                        "background-dark": "#121212",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#1E1E1E",
+                        "text-light": "#333333",
+                        "text-dark": "#E5E5E5",
+                        "border-light": "#E5E7EB",
+                        "border-dark": "#374151",
+                    },
+                    fontFamily: {
+                        display: ["Kanit", "sans-serif"],
+                        body: ["Sarabun", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'xl': '1rem',
+                        '2xl': '1.5rem',
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Sarabun', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Kanit', sans-serif;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #F0A8D0;
+            border-radius: 4px;
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300 flex flex-col min-h-screen">
+    <nav
+        class="sticky top-0 z-50 bg-surface-light/90 dark:bg-surface-dark/90 backdrop-blur-md border-b border-border-light dark:border-border-dark shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-3">
+                    <div
+                        class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                        M
+                    </div>
+                    <div class="flex flex-col">
+                        <span
+                            class="font-display font-bold text-xl text-gray-900 dark:text-white leading-none">MCU</span>
+                        <span class="text-xs text-gray-500 dark:text-gray-400">Dept. of Religion &amp; Philosophy</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center gap-6">
+                    <div class="flex space-x-6">
+                        <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium"
+                            href="#">หน้าหลัก</a>
+                        <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium"
+                            href="#">เกี่ยวกับภาควิชา</a>
+                        <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium"
+                            href="#">หลักสูตร</a>
+                        <a class="text-primary dark:text-primary font-medium" href="#">ปฏิทินการศึกษา</a>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="flex items-center bg-gray-100 dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-full p-1">
+                            <button
+                                class="px-3 py-1 rounded-full bg-white dark:bg-gray-700 shadow-sm text-xs font-bold text-primary transition-all">TH</button>
+                            <button
+                                class="px-3 py-1 rounded-full text-gray-500 dark:text-gray-400 text-xs font-bold hover:text-primary transition-colors">EN</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-600 dark:text-gray-300 hover:text-primary">
+                        <span class="material-icons-round text-3xl">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header
+        class="relative bg-surface-light dark:bg-surface-dark border-b border-border-light dark:border-border-dark py-12 overflow-hidden">
+        <div class="absolute inset-0 bg-primary/5 opacity-50 dark:opacity-10"></div>
+        <div class="absolute -right-20 -top-20 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
+        <div class="absolute -left-20 -bottom-20 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+                    ปฏิทินการศึกษา/วิชาการ
+                </h1>
+                <p class="text-lg text-gray-600 dark:text-gray-300 font-light max-w-2xl mx-auto">
+                    ติดตามกำหนดการ วันสำคัญ กิจกรรมวิชาการ และวันหยุดของภาควิชาศาสนาและปรัชญา คณะพุทธศาสตร์
+                </p>
+            </div>
+        </div>
+    </header>
+    <div
+        class="bg-white/50 dark:bg-surface-dark/50 border-b border-border-light dark:border-border-dark backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 py-3 text-sm text-gray-500 dark:text-gray-400">
+            <a class="hover:text-primary transition-colors" href="#">หน้าแรก</a>
+            <span class="mx-2">/</span>
+            <span class="text-primary font-medium">ปฏิทินการศึกษา</span>
+        </div>
+    </div>
+    <main class="flex-grow py-12 bg-background-light dark:bg-background-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-8">
+                <aside class="w-full lg:w-1/4 space-y-6">
+                    <button
+                        class="w-full py-3 bg-primary text-gray-900 rounded-xl font-bold shadow-md hover:bg-primary-darker hover:text-white transition-all flex items-center justify-center gap-2">
+                        <span class="material-icons-round">add_circle</span>
+                        เพิ่มกิจกรรม (สำหรับเจ้าหน้าที่)
+                    </button>
+                    <div
+                        class="bg-surface-light dark:bg-surface-dark rounded-2xl p-6 shadow-sm border border-border-light dark:border-border-dark">
+                        <h3 class="font-bold text-lg mb-4 text-gray-900 dark:text-white flex items-center">
+                            <span class="material-icons-round mr-2 text-primary">filter_alt</span> ตัวกรองประเภท
+                        </h3>
+                        <div class="space-y-3">
+                            <label class="flex items-center space-x-3 cursor-pointer group">
+                                <input checked=""
+                                    class="form-checkbox h-5 w-5 text-primary rounded border-gray-300 focus:ring-primary"
+                                    type="checkbox" />
+                                <span class="w-3 h-3 rounded-full bg-primary"></span>
+                                <span
+                                    class="text-gray-600 dark:text-gray-300 group-hover:text-primary transition-colors">กิจกรรมวิชาการ</span>
+                            </label>
+                            <label class="flex items-center space-x-3 cursor-pointer group">
+                                <input checked=""
+                                    class="form-checkbox h-5 w-5 text-red-500 rounded border-gray-300 focus:ring-red-500"
+                                    type="checkbox" />
+                                <span class="w-3 h-3 rounded-full bg-red-500"></span>
+                                <span
+                                    class="text-gray-600 dark:text-gray-300 group-hover:text-primary transition-colors">การสอบ
+                                    / ส่งงาน</span>
+                            </label>
+                            <label class="flex items-center space-x-3 cursor-pointer group">
+                                <input checked=""
+                                    class="form-checkbox h-5 w-5 text-blue-500 rounded border-gray-300 focus:ring-blue-500"
+                                    type="checkbox" />
+                                <span class="w-3 h-3 rounded-full bg-blue-500"></span>
+                                <span
+                                    class="text-gray-600 dark:text-gray-300 group-hover:text-primary transition-colors">กิจกรรมนักศึกษา</span>
+                            </label>
+                            <label class="flex items-center space-x-3 cursor-pointer group">
+                                <input checked=""
+                                    class="form-checkbox h-5 w-5 text-green-500 rounded border-gray-300 focus:ring-green-500"
+                                    type="checkbox" />
+                                <span class="w-3 h-3 rounded-full bg-green-500"></span>
+                                <span
+                                    class="text-gray-600 dark:text-gray-300 group-hover:text-primary transition-colors">วันหยุด
+                                    / วันสำคัญ</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-surface-light dark:bg-surface-dark rounded-2xl p-6 shadow-sm border border-border-light dark:border-border-dark">
+                        <h3 class="font-bold text-lg mb-4 text-gray-900 dark:text-white">เร็วๆ นี้</h3>
+                        <div class="space-y-4">
+                            <div class="flex gap-3 items-start border-l-2 border-primary pl-3">
+                                <div class="flex flex-col items-center min-w-[3rem]">
+                                    <span class="text-xs text-gray-500 uppercase font-bold">ม.ค.</span>
+                                    <span class="text-xl font-bold text-gray-900 dark:text-white">16</span>
+                                </div>
+                                <div>
+                                    <h4
+                                        class="text-sm font-bold text-gray-900 dark:text-white leading-tight hover:text-primary cursor-pointer">
+                                        วันครูแห่งชาติ</h4>
+                                    <span
+                                        class="text-xs text-green-500 bg-green-100 dark:bg-green-900/30 px-2 py-0.5 rounded-full mt-1 inline-block">วันหยุด</span>
+                                </div>
+                            </div>
+                            <div class="flex gap-3 items-start border-l-2 border-red-500 pl-3">
+                                <div class="flex flex-col items-center min-w-[3rem]">
+                                    <span class="text-xs text-gray-500 uppercase font-bold">ม.ค.</span>
+                                    <span class="text-xl font-bold text-gray-900 dark:text-white">22</span>
+                                </div>
+                                <div>
+                                    <h4
+                                        class="text-sm font-bold text-gray-900 dark:text-white leading-tight hover:text-primary cursor-pointer">
+                                        ส่งหัวข้อวิทยานิพนธ์</h4>
+                                    <span
+                                        class="text-xs text-red-500 bg-red-100 dark:bg-red-900/30 px-2 py-0.5 rounded-full mt-1 inline-block">Deadline</span>
+                                </div>
+                            </div>
+                            <div class="flex gap-3 items-start border-l-2 border-primary pl-3">
+                                <div class="flex flex-col items-center min-w-[3rem]">
+                                    <span class="text-xs text-gray-500 uppercase font-bold">ก.พ.</span>
+                                    <span class="text-xl font-bold text-gray-900 dark:text-white">05</span>
+                                </div>
+                                <div>
+                                    <h4
+                                        class="text-sm font-bold text-gray-900 dark:text-white leading-tight hover:text-primary cursor-pointer">
+                                        สัมมนาศาสนาเปรียบเทียบ ครั้งที่ 1</h4>
+                                    <span
+                                        class="text-xs text-primary bg-primary/10 px-2 py-0.5 rounded-full mt-1 inline-block text-primary-darker">วิชาการ</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                <section class="w-full lg:w-3/4">
+                    <div
+                        class="bg-surface-light dark:bg-surface-dark rounded-2xl shadow-lg border border-border-light dark:border-border-dark overflow-hidden">
+                        <div
+                            class="p-6 border-b border-border-light dark:border-border-dark flex flex-col sm:flex-row justify-between items-center gap-4">
+                            <div class="flex items-center gap-4">
+                                <h2 class="text-2xl font-bold text-gray-900 dark:text-white">มกราคม 2567</h2>
+                                <div class="flex bg-gray-100 dark:bg-gray-800 rounded-lg p-1">
+                                    <button
+                                        class="p-1 hover:bg-white dark:hover:bg-gray-700 rounded-md shadow-sm transition-all text-gray-600 dark:text-gray-300">
+                                        <span class="material-icons-round">chevron_left</span>
+                                    </button>
+                                    <button
+                                        class="p-1 hover:bg-white dark:hover:bg-gray-700 rounded-md shadow-sm transition-all text-gray-600 dark:text-gray-300">
+                                        <span class="material-icons-round">chevron_right</span>
+                                    </button>
+                                </div>
+                                <button
+                                    class="text-sm font-medium text-primary hover:text-primary-darker border border-primary/30 px-3 py-1 rounded-md transition-colors">
+                                    วันนี้
+                                </button>
+                            </div>
+                            <div class="flex bg-gray-100 dark:bg-gray-800 rounded-lg p-1 text-sm font-medium">
+                                <button
+                                    class="px-4 py-1.5 bg-white dark:bg-gray-700 rounded-md shadow-sm text-gray-900 dark:text-white">เดือน</button>
+                                <button
+                                    class="px-4 py-1.5 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">สัปดาห์</button>
+                                <button
+                                    class="px-4 py-1.5 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">รายการ</button>
+                            </div>
+                        </div>
+                        <div
+                            class="grid grid-cols-7 border-b border-border-light dark:border-border-dark bg-gray-50 dark:bg-gray-800/50">
+                            <div class="py-3 text-center text-sm font-bold text-red-500">อา</div>
+                            <div class="py-3 text-center text-sm font-bold text-gray-700 dark:text-gray-300">จ</div>
+                            <div class="py-3 text-center text-sm font-bold text-gray-700 dark:text-gray-300">อ</div>
+                            <div class="py-3 text-center text-sm font-bold text-gray-700 dark:text-gray-300">พ</div>
+                            <div class="py-3 text-center text-sm font-bold text-gray-700 dark:text-gray-300">พฤ</div>
+                            <div class="py-3 text-center text-sm font-bold text-gray-700 dark:text-gray-300">ศ</div>
+                            <div class="py-3 text-center text-sm font-bold text-gray-700 dark:text-gray-300">ส</div>
+                        </div>
+                        <div
+                            class="grid grid-cols-7 auto-rows-[minmax(120px,auto)] bg-border-light dark:bg-border-dark gap-px">
+                            <div
+                                class="bg-surface-light dark:bg-surface-dark p-2 text-gray-400 dark:text-gray-600 text-sm">
+                                31</div>
+                            <div
+                                class="bg-surface-light dark:bg-surface-dark p-2 min-h-[120px] group hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                <span
+                                    class="inline-flex w-7 h-7 items-center justify-center rounded-full text-sm font-medium text-red-500 bg-red-50 dark:bg-red-900/20">1</span>
+                                <div class="mt-2">
+                                    <div
+                                        class="px-2 py-1 text-xs rounded bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 mb-1 border-l-2 border-green-500 truncate">
+                                        วันขึ้นปีใหม่
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-surface-light dark:bg-surface-dark p-2 min-h-[120px] group hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">2</span>
+                            </div>
+                            <div
+                                class="bg-surface-light dark:bg-surface-dark p-2 min-h-[120px] group hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">3</span>
+                            </div>
+                            <div
+                                class="bg-surface-light dark:bg-surface-dark p-2 min-h-[120px] group hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">4</span>
+                            </div>
+                            <div
+                                class="bg-surface-light dark:bg-surface-dark p-2 min-h-[120px] group hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">5</span>
+                                <div class="mt-2">
+                                    <div
+                                        class="px-2 py-1 text-xs rounded bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 mb-1 border-l-2 border-blue-500 truncate">
+                                        กิจกรรมรับน้อง
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-surface-light dark:bg-surface-dark p-2 min-h-[120px] group hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">6</span>
+                            </div>
+                            <div
+                                class="bg-surface-light dark:bg-surface-dark p-2 min-h-[120px] group hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">7</span>
+                            </div>
+                            <div
+                                class="bg-surface-light dark:bg-surface-dark p-2 min-h-[120px] group hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">8</span>
+                                <div class="mt-2">
+                                    <div
+                                        class="px-2 py-1 text-xs rounded bg-primary/10 text-gray-900 dark:text-white mb-1 border-l-2 border-primary truncate">
+                                        เปิดภาคเรียน 2/2566
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-surface-light dark:bg-surface-dark p-2 min-h-[120px] group hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">9</span>
+                            </div>
+                            <div
+                                class="bg-surface-light dark:bg-surface-dark p-2 min-h-[120px] group hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">10</span>
+                                <div class="mt-2">
+                                    <div
+                                        class="px-2 py-1 text-xs rounded bg-primary/10 text-gray-900 dark:text-white mb-1 border-l-2 border-primary truncate">
+                                        ประชุมภาควิชา
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-surface-light dark:bg-surface-dark p-2 min-h-[120px] group hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                <span
+                                    class="inline-flex w-7 h-7 items-center justify-center rounded-full text-sm font-bold text-white bg-primary shadow-lg ring-2 ring-white dark:ring-gray-800">11</span>
+                                <div class="mt-2">
+                                    <div
+                                        class="px-2 py-1 text-xs rounded bg-primary/10 text-gray-900 dark:text-white mb-1 border-l-2 border-primary truncate">
+                                        เสวนาธรรม (Zoom)
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-surface-light dark:bg-surface-dark p-2 min-h-[120px] group hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">12</span>
+                            </div>
+                            <div
+                                class="bg-surface-light dark:bg-surface-dark p-2 min-h-[120px] group hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">13</span>
+                            </div>
+                            <div
+                                class="bg-surface-light dark:bg-surface-dark p-2 min-h-[120px] group hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">14</span>
+                            </div>
+                            <div
+                                class="bg-surface-light dark:bg-surface-dark p-2 min-h-[120px] group hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">15</span>
+                            </div>
+                            <div
+                                class="bg-surface-light dark:bg-surface-dark p-2 min-h-[120px] group hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">16</span>
+                                <div class="mt-2">
+                                    <div
+                                        class="px-2 py-1 text-xs rounded bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 mb-1 border-l-2 border-green-500 truncate">
+                                        วันครูแห่งชาติ
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-surface-light dark:bg-surface-dark p-2 min-h-[120px] group hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">17</span>
+                            </div>
+                            <div
+                                class="bg-surface-light dark:bg-surface-dark p-2 min-h-[120px] group hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">18</span>
+                            </div>
+                            <div
+                                class="bg-surface-light dark:bg-surface-dark p-2 min-h-[120px] group hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">19</span>
+                            </div>
+                            <div
+                                class="bg-surface-light dark:bg-surface-dark p-2 min-h-[120px] group hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">20</span>
+                            </div>
+                            <div
+                                class="bg-surface-light dark:bg-surface-dark p-2 min-h-[120px] group hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">21</span>
+                            </div>
+                            <div
+                                class="bg-surface-light dark:bg-surface-dark p-2 min-h-[120px] group hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">22</span>
+                                <div class="mt-2">
+                                    <div
+                                        class="px-2 py-1 text-xs rounded bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 mb-1 border-l-2 border-red-500 truncate">
+                                        ส่งหัวข้อ Thesis
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-surface-light dark:bg-surface-dark p-2 min-h-[120px] group hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">23</span>
+                            </div>
+                            <div
+                                class="bg-surface-light dark:bg-surface-dark p-2 min-h-[120px] group hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">24</span>
+                            </div>
+                            <div
+                                class="bg-surface-light dark:bg-surface-dark p-2 min-h-[120px] group hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">25</span>
+                            </div>
+                            <div
+                                class="bg-surface-light dark:bg-surface-dark p-2 min-h-[120px] group hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">26</span>
+                                <div class="mt-2">
+                                    <div
+                                        class="px-2 py-1 text-xs rounded bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 mb-1 border-l-2 border-blue-500 truncate">
+                                        ค่ายคุณธรรม
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-surface-light dark:bg-surface-dark p-2 min-h-[120px] group hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">27</span>
+                                <div class="mt-2">
+                                    <div
+                                        class="px-2 py-1 text-xs rounded bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 mb-1 border-l-2 border-blue-500 truncate">
+                                        ค่ายคุณธรรม
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-surface-light dark:bg-surface-dark p-2 min-h-[120px] group hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">28</span>
+                                <div class="mt-2">
+                                    <div
+                                        class="px-2 py-1 text-xs rounded bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 mb-1 border-l-2 border-blue-500 truncate">
+                                        ค่ายคุณธรรม
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-surface-light dark:bg-surface-dark p-2 min-h-[120px] group hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">29</span>
+                            </div>
+                            <div
+                                class="bg-surface-light dark:bg-surface-dark p-2 min-h-[120px] group hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">30</span>
+                            </div>
+                            <div
+                                class="bg-surface-light dark:bg-surface-dark p-2 min-h-[120px] group hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">31</span>
+                            </div>
+                            <div
+                                class="bg-surface-light dark:bg-surface-dark p-2 text-gray-400 dark:text-gray-600 text-sm">
+                                1</div>
+                            <div
+                                class="bg-surface-light dark:bg-surface-dark p-2 text-gray-400 dark:text-gray-600 text-sm">
+                                2</div>
+                            <div
+                                class="bg-surface-light dark:bg-surface-dark p-2 text-gray-400 dark:text-gray-600 text-sm">
+                                3</div>
+                        </div>
+                    </div>
+                    <div
+                        class="mt-8 bg-surface-light dark:bg-surface-dark rounded-2xl shadow-sm border border-border-light dark:border-border-dark p-6">
+                        <div class="flex items-center justify-between mb-6">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white">รายละเอียดกิจกรรมเดือนมกราคม
+                            </h3>
+                            <a class="text-sm text-primary hover:text-primary-darker font-medium flex items-center"
+                                href="#">ดาวน์โหลด PDF <span
+                                    class="material-icons-round text-base ml-1">download</span></a>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse">
+                                <thead>
+                                    <tr class="text-sm text-gray-500 border-b border-gray-200 dark:border-gray-700">
+                                        <th class="py-3 px-4 font-medium">วันที่</th>
+                                        <th class="py-3 px-4 font-medium">กิจกรรม</th>
+                                        <th class="py-3 px-4 font-medium">ประเภท</th>
+                                        <th class="py-3 px-4 font-medium">สถานที่/รายละเอียด</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-sm">
+                                    <tr
+                                        class="border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                                        <td class="py-4 px-4 font-bold text-gray-900 dark:text-white">1 ม.ค. 67</td>
+                                        <td class="py-4 px-4 text-gray-700 dark:text-gray-300">วันขึ้นปีใหม่</td>
+                                        <td class="py-4 px-4"><span
+                                                class="px-2 py-1 rounded-full bg-green-100 text-green-800 text-xs font-bold">วันหยุด</span>
+                                        </td>
+                                        <td class="py-4 px-4 text-gray-500">หยุดราชการ</td>
+                                    </tr>
+                                    <tr
+                                        class="border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                                        <td class="py-4 px-4 font-bold text-gray-900 dark:text-white">8 ม.ค. 67</td>
+                                        <td class="py-4 px-4 text-gray-700 dark:text-gray-300">เปิดภาคการศึกษา 2/2566
+                                        </td>
+                                        <td class="py-4 px-4"><span
+                                                class="px-2 py-1 rounded-full bg-primary/20 text-primary-darker text-xs font-bold">วิชาการ</span>
+                                        </td>
+                                        <td class="py-4 px-4 text-gray-500">สำหรับนิสิตทุกชั้นปี</td>
+                                    </tr>
+                                    <tr
+                                        class="border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                                        <td class="py-4 px-4 font-bold text-gray-900 dark:text-white">22 ม.ค. 67</td>
+                                        <td class="py-4 px-4 text-gray-700 dark:text-gray-300">กำหนดส่งหัวข้อวิทยานิพนธ์
+                                        </td>
+                                        <td class="py-4 px-4"><span
+                                                class="px-2 py-1 rounded-full bg-red-100 text-red-800 text-xs font-bold">สอบ/ส่งงาน</span>
+                                        </td>
+                                        <td class="py-4 px-4 text-gray-500">นิสิตระดับบัณฑิตศึกษา</td>
+                                    </tr>
+                                    <tr
+                                        class="border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                                        <td class="py-4 px-4 font-bold text-gray-900 dark:text-white">26-28 ม.ค. 67</td>
+                                        <td class="py-4 px-4 text-gray-700 dark:text-gray-300">
+                                            โครงการค่ายคุณธรรมจริยธรรม</td>
+                                        <td class="py-4 px-4"><span
+                                                class="px-2 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-bold">กิจกรรม</span>
+                                        </td>
+                                        <td class="py-4 px-4 text-gray-500">ณ อาคารปฏิบัติธรรม มจร.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-surface-dark text-white pt-16 pb-8 border-t-4 border-primary mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h3 class="font-bold text-lg mb-4 text-primary">การศึกษา</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a class="hover:text-white transition-colors" href="#">หลักสูตรศาสนาเปรียบเทียบ</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">หลักสูตรนานาชาติ</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">การปฏิบัติธรรม</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">การสมัครเข้าศึกษา</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4 text-primary">วิจัยและนวัตกรรม</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a class="hover:text-white transition-colors" href="#">บทความวิชาการ</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">วารสารพุทธศาสตร์</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">คลังความรู้ศาสนา</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">ศูนย์อาเซียนศึกษา</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4 text-primary">บริการสังคม</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a class="hover:text-white transition-colors" href="#">บริการวิชาการแก่ชุมชน</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">โครงการธรรมะสัญจร</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">ค่ายคุณธรรม</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4 text-primary">เกี่ยวกับเรา</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a class="hover:text-white transition-colors" href="#">ประวัติความเป็นมา</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">ปฏิทินกิจกรรม</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">ทำเนียบบุคลากร</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="flex items-center gap-3">
+                    <div
+                        class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white font-bold text-sm">
+                        M</div>
+                    <span class="text-sm text-gray-400">มหาวิทยาลัยมหาจุฬาลงกรณราชวิทยาลัย © 2024</span>
+                </div>
+                <div class="flex space-x-4">
+                    <a class="text-gray-400 hover:text-white" href="#"><i class="material-icons-round">facebook</i></a>
+                    <a class="text-gray-400 hover:text-white" href="#"><i
+                            class="material-icons-round">smart_display</i></a>
+                    <a class="text-gray-400 hover:text-white" href="#"><i class="material-icons-round">podcasts</i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
